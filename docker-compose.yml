@@ -1,0 +1,22 @@
+name: hercules
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    restart: unless-stopped
+
+    environment:
+      MYSQL_ROOT_PASSWORD: ragnarok
+      MYSQL_DATABASE: ragnarok
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./docker/db/init:/docker-entrypoint-initdb.d
+      - ./sql-files:/docker-entrypoint-initdb.d/sql-files
+
+volumes:
+  db_data:

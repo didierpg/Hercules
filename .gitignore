@@ -152,3 +152,8 @@ Thumbs.db
 
 # generated files
 generated
+/cache
+/plugins
+/vcproj
+api-server.exp
+api-server.lib

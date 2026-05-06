@@ -1,0 +1,1 @@
+SOURCE /docker-entrypoint-initdb.d/sql-files/logs.sql;
